@@ -1,0 +1,108 @@
+.banner-container {
+  position: relative;
+}
+
+.banner-grid-container {
+  top: -75px;
+  position: relative;
+  min-height: 100vh;
+  width: 90%;
+  margin: 0 auto 0 auto;
+}
+
+.banner-text-container {
+  position: absolute;
+  top: 20%;
+}
+
+.banner-carousel-container {
+  position: absolute;
+  bottom: 15%;
+  z-index: 1;
+}
+
+.carousel {
+  margin: 0 auto 0 auto;
+  width: 90%;
+}
+
+.banner-background {
+  position: absolute;
+  width: 100%;
+  min-height: 20vh;
+  bottom: 0;
+  background-color: $primary-color;
+  
+}
+
+// Large Screens
+
+@media (min-width: $lg-media) {
+  .banner-grid-container {
+    width: 80%;
+    display: grid;
+    grid-template-columns: 30% 70%;
+  }
+
+  .banner-text-container {
+    position: relative;
+    top: 30%;
+  }
+
+  .banner-carousel-container {
+    position: initial;
+    bottom: initial;
+    z-index: 2;
+    
+    align-self: end;
+  }
+
+  .banner-background {
+    position: absolute;
+    width: 30%;
+    min-height: 90vh;
+    bottom: -10%;
+    right: 0;
+    background-color: $primary-color;
+    z-index: 1;
+  }
+
+ 
+
+  
+
+  .banner-carousel-container {
+    position: relative;
+    z-index: 2;
+  }
+
+ 
+}
+
+// DESKTOP CODE ==============================================================
+
+// .banner-grid-container {
+//     width: 80%;
+//     min-height: 90vh;
+//     margin: 0 auto 0 auto;
+//     display: grid;
+//     grid-template-columns: 30% 70%;
+//   }
+
+// .banner-text-container {position: relative;
+// top: 25%;}
+
+// .banner-image-container{position: relative;
+// align-self: end;}
+
+// .banner-carousel-container {position: relative;
+// z-index: 2;}
+
+// .banner-image-background {position: absolute;
+// top: -70%;
+// left: 50%;
+// width: 55%;
+// height: 205%;
+// background-color: $primary-color;
+// z-index: 1;
+// }

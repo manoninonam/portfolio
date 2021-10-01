@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+    crossorigin="anonymous"></script>
+  <script type="text/javascript" src="js/scripts.js" defer></script>
+  <script src="https://kit.fontawesome.com/3ef49ce8f5.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="scss/main.css" />
+  <title>Portfolio</title>
+</head>
+
+<body>
+  <header class="header-container">
+    <nav class="nav-container">
+      <div class="navbar-own-logo">
+        <a href="#home"><img src="/images/navbar/MH.png" alt="logo"></a>
+      </div>
+      <ul class="navbar-main-links">
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <ul class="navbar-icon-links">
+        <li><a href="https://github.com/manoninonam" target="_blank"><i class="fab fa-github"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/manon-heijmans/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+        <li class="navbar-hamburger-icon"><span style="font-size:30px;cursor:pointer" onclick="openNav()"><i class="bi bi-list"></i></span> </li>
+      </ul>
+      <div id="myNav" class="nav-overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+          <a href="#projects" onclick="closeNav()">Projects</a>
+          <a href="#about" onclick="closeNav()">About</a>
+          <a href="#contact" onclick="closeNav()">Contact</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="banner-container">
+      <div class="banner-grid-container">
+        <div class="banner-text-container">
+          <h1>Manon <br>Heijmans // <br>
+            Web <br>Developer <br>
+        </div>
+        <div class="banner-carousel-container">
+          <div id="carousel" class="carousel slide" data-bs-ride="carousel">
+            <div id="carouselExampleFade" class="carousel slide carousel-fade banner-carousel-style"
+              data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="/images/carousel/mockup1.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="/images/carousel/mockup2.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="/images/carousel/mockup3.png" class="d-block w-100" alt="...">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="banner-background"></div>
+      </div>
+
+    </section>
+
+    <section id="projects" class="projects">
+      <div class=projects-flex-container>
+        <h2>Projects</h2>
+
+        <div class="project-card card1">
+          <div class="background-block"></div>
+          <div class="project-card-image-container">
+            <img src="/images/projects/large-e-commerce.png" alt="dummy">
+            <div class="overlay"></div>
+          </div>
+          <div class="slider">
+            <div class="slider-text">
+              <p>The Greenery</p>
+              <p>August, 2021</p>
+              <p>E-commerce project with login and shopping cart functionality made as part of my course at TechGrounds. Made with React, Redux and Firebase. 
+              </p>
+              <a href="https://manoninonam.github.io/live-preview-react-e-commerce-app/#/">View project</a>
+              <a href="https://github.com/manoninonam/live-preview-react-e-commerce-app">View source code</a>
+            </div>
+            <div class="slider-accent"></div>
+            <div class="border-accent"></div>
+          </div>
+        </div>
+
+        <div class="project-card card2">
+          <div class="background-block"></div>
+          <div class="background-block"></div>
+          <div class="project-card-image-container">
+            <img src="/images/projects/Schermafbeelding 2021-10-01 om 11.57.10.png" alt="dummy">
+            <div class="overlay"></div>
+          </div> 
+          <div class="slider">
+            <div class="slider-text">
+              <p>Weather App</p>
+              <p>July, 2021</p>
+              <p>Small weather-app project in React using the OpenWeatherApp API. Made as part of my course at TechGrounds. 
+              </p>
+              <a href="https://manoninonam.github.io/live-preview-react-weather-app/">View project</a>
+              <a href="https://github.com/manoninonam/live-preview-react-weather-app">View source code</a>
+            </div>
+            <div class="slider-accent"></div>
+          </div>
+          <div class="border-accent"></div>
+        </div>
+        <div class="project-card card3">
+          <div class="background-block"></div>
+          <div class="background-block"></div>
+          <div class="project-card-image-container">
+            <img src="/images/dummy.png" alt="dummy">
+            <div class="overlay"></div>
+          </div>
+          <div class="slider">
+            <div class="slider-text">
+              <p>Project Titel</p>
+              <p>May 27, 2021</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore odio, placeat itaque natus facere
+                incidunt magnam cupiditate id assumenda cum nihil quam obcaecati fugit porro? A est fugiat facilis esse?
+              </p>
+            </div>
+            <div class="slider-accent"></div>
+            <div class="border-accent"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about-container">
+      <div class="about-block-container">
+        <div class="about-block-object-top"></div>
+        <div class="about-text-container">
+          <h2>About</h2>
+          <div class="about-text text1">
+            <h3>Who I am</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae dolores asperiores modi, quo
+              praesentium similique a quam accusantium sunt non? Cumque, voluptas voluptate. Odio accusantium, beatae
+              placeat magnam modi voluptate.
+              Porro placeat illo nulla aut quod cum mollitia sapiente ipsum ut.</p>
+          </div>
+          <div class="about-text text2">
+            <h3>What I do</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae dolores asperiores modi, quo
+              praesentium similique a quam accusantium sunt non? Cumque, voluptas voluptate. Odio accusantium, beatae
+              placeat magnam modi voluptate.
+              Porro placeat illo nulla aut quod cum mollitia sapiente ipsum ut.</p>
+          </div>
+          <div class="about-text text3">
+            <h3>What I love</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae dolores asperiores modi, quo
+              praesentium similique a quam accusantium sunt non? Cumque, voluptas voluptate. Odio accusantium, beatae
+              placeat magnam modi voluptate.
+              Porro placeat illo nulla aut quod cum mollitia sapiente ipsum ut.</p>
+          </div>
+        </div>
+        <div class="about-block-object-bottom"></div>
+      </div>
+
+      <div class="about-skills-container">
+        <div class="about-skills-text">
+          <h3>What I can</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae dolores asperiores modi, quo
+            praesentium similique a quam accusantium sunt non? Cumque, voluptas voluptate. Odio accusantium, beatae
+            placeat magnam modi voluptate.
+            Porro placeat illo nulla aut quod cum mollitia sapiente ipsum ut.</p>
+        </div>
+        <div class='skills-flex-container'>
+          <div class='skills-column'>
+            <h4>HTML</h4>
+            <h4>CSS</h4>
+            <h4>JavaScript</h4>
+            <h4>React</h4>
+            <h4>Sass</h4>
+          </div>
+          <div class="bars-column">
+            <div class="skills-bar html-bar"></div>
+            <div class="skills-bar css-bar"></div>
+            <div class="skills-bar js-bar"></div>
+            <div class="skills-bar react-bar"></div>
+            <div class="skills-bar sass-bar"></div>
+          </div>
+        </div>
+        <div class="about-image-and-skills"></div>
+        <img class="profile-picture" src="/images/about/profilepicture-greyscale.png">
+      </div>
+
+      </div>
+    </section>
+
+    <section id="contact" class="contact-container">
+      <h2>Contact </h2>
+      <div class="contact-info">
+        <p>mail: manon.heijmans@gmail.com</p>
+        <p>Nijmegen</p>
+      </div>
+      <div class="contact-socials">
+        <a href="https://github.com/manoninonam" target="_blank">
+          <p>Github: manoninonam</p>
+        </a>
+        <a href="https://www.linkedin.com/in/manon-heijmans/" target="_blank">
+          <p>LinkedIn: manon-heijmans</p>
+        </a>
+      </div>
+
+
+    </section>
+    
+  </main>
+
+
+
+
+
+
+ 
+
+</body>
+
+</html>
