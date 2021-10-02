@@ -16,9 +16,29 @@
 
 .project-card {
     margin-bottom: 5vh;
-    border-left: solid 5px $secondary-color;
+    border-left: solid 5px $primary-color;
+
     position: relative;
     background-color: white;
+}
+
+
+
+
+.project-links-container {
+  width: 100%;
+  padding-top: 3vh;
+  display: flex;
+
+}
+
+.project-links-container a {
+  color: $secondary-color;
+  margin-right: 15px;
+}
+
+.project-links-container a:hover {
+  border-bottom: 1px solid $secondary-color;
 }
 
 .project-card-image-container {
@@ -29,7 +49,7 @@
 }
 
 .project-card-image-container  img{
-    width: 90vw;
+    width: 100%;
     display: block;
     
 }
@@ -38,7 +58,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  opacity: 0.2;
+  opacity: 0.1;
   width: 90vw;
   height: 100%;
   background-color: $background-color;
@@ -58,23 +78,42 @@
     padding: 1rem;
 }
 
-.border-accent {
-    background-color: $primary-color;
-    height: 0%;
-    width: 5px;
-    position: absolute;
-    top: 0;
-    right: 100%;
-    transition-duration: 0.5s;
-    transition-timing-function: ease-in;
+// .border-accent {
+//     background-color: $primary-color;
+//     height: 0%;
+//     width: 5px;
+//     position: absolute;
+//     top: 0;
+//     right: 100%;
+//     transition-duration: 0.5s;
+//     transition-timing-function: ease-in;
   
-}
+// }
 
-.project-card:hover .border-accent {
-    height: 100%;
+// .project-card:hover .border-accent {
+//     height: 100%;
    
     
+// }
+
+
+
+//medium screens  
+
+@media screen and (min-width: $lg-media) and (max-width: 1440px) {
+  .project-card:hover .slider {
+    width: 70%;
 }
+}
+
+// extra large screens 
+
+@media screen and (min-width: 1440px) {
+  .project-card:hover .slider {
+    width: 50%;
+}
+}
+
 
 
 //Large screens ===================================================
@@ -105,10 +144,11 @@
 .project-card-image-container {
     position: relative;
     width: 50vw;
+    
+  
 }
 
 .project-card-image-container img {
-  height: 600px;
   object-fit: cover;
 }
 //card positioning
@@ -253,9 +293,6 @@
   right: 100%;
 }
 
-.project-card:hover .slider {
-  width: 50%;
-}
 
 
 //slider accents ----------------------------------------------------

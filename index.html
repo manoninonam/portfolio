@@ -30,8 +30,10 @@
       </ul>
       <ul class="navbar-icon-links">
         <li><a href="https://github.com/manoninonam" target="_blank"><i class="fab fa-github"></i></a></li>
-        <li><a href="https://www.linkedin.com/in/manon-heijmans/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-        <li class="navbar-hamburger-icon"><span style="font-size:30px;cursor:pointer" onclick="openNav()"><i class="bi bi-list"></i></span> </li>
+        <li><a href="https://www.linkedin.com/in/manon-heijmans/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </li>
+        <li class="navbar-hamburger-icon"><span style="font-size:30px;cursor:pointer" onclick="openNav()"><i
+              class="bi bi-list"></i></span> </li>
       </ul>
       <div id="myNav" class="nav-overlay">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -56,14 +58,11 @@
             <div id="carouselExampleFade" class="carousel slide carousel-fade banner-carousel-style"
               data-bs-ride="carousel">
               <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img src="/images/carousel/mockup1.png" class="d-block w-100" alt="...">
+                <div class="carousel-item active" data-bs-interval="4000">
+                  <img src="/images/carousel/e-commerce-mockup1.png" class="d-block w-100" alt="project-mockup">
                 </div>
-                <div class="carousel-item">
-                  <img src="/images/carousel/mockup2.png" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                  <img src="/images/carousel/mockup3.png" class="d-block w-100" alt="...">
+                <div class="carousel-item" data-bs-interval="4000">
+                  <img src="/images/carousel/e-commerce-mockup2.png" class="d-block w-100" alt="project-mockup">
                 </div>
               </div>
             </div>
@@ -81,17 +80,20 @@
         <div class="project-card card1">
           <div class="background-block"></div>
           <div class="project-card-image-container">
-            <img src="/images/projects/large-e-commerce.png" alt="dummy">
+            <img src="/images/projects/e-commerce-preview.jpg" alt="dummy">
             <div class="overlay"></div>
           </div>
           <div class="slider">
             <div class="slider-text">
               <p>The Greenery</p>
               <p>August, 2021</p>
-              <p>E-commerce project with login and shopping cart functionality made as part of my course at TechGrounds. Made with React, Redux and Firebase. 
+              <p>E-commerce project with login and shopping cart functionality made as part of my course at TechGrounds.
+                Made with React, Redux and Firebase.
               </p>
+              <div class="project-links-container">
               <a href="https://manoninonam.github.io/live-preview-react-e-commerce-app/#/">View project</a>
               <a href="https://github.com/manoninonam/live-preview-react-e-commerce-app">View source code</a>
+            </div>
             </div>
             <div class="slider-accent"></div>
             <div class="border-accent"></div>
@@ -109,16 +111,19 @@
             <div class="slider-text">
               <p>Weather App</p>
               <p>July, 2021</p>
-              <p>Small weather-app project in React using the OpenWeatherApp API. Made as part of my course at TechGrounds. 
+              <p>Small weather-app project in React using the OpenWeatherApp API. Made as part of my course at
+                TechGrounds.
               </p>
+              <div class="project-links-container">
               <a href="https://manoninonam.github.io/live-preview-react-weather-app/">View project</a>
               <a href="https://github.com/manoninonam/live-preview-react-weather-app">View source code</a>
+            </div>
             </div>
             <div class="slider-accent"></div>
           </div>
           <div class="border-accent"></div>
         </div>
-        <div class="project-card card3">
+        <!-- <div class="project-card card3">
           <div class="background-block"></div>
           <div class="background-block"></div>
           <div class="project-card-image-container">
@@ -136,7 +141,7 @@
             <div class="slider-accent"></div>
             <div class="border-accent"></div>
           </div>
-        </div>
+        </div> -->
       </div>
     </section>
 
@@ -161,10 +166,11 @@
           </div>
           <div class="about-text text3">
             <h3>What I love</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae dolores asperiores modi, quo
+            <p>I love to get to the bottom to things... Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae dolores asperiores modi, quo
               praesentium similique a quam accusantium sunt non? Cumque, voluptas voluptate. Odio accusantium, beatae
               placeat magnam modi voluptate.
               Porro placeat illo nulla aut quod cum mollitia sapiente ipsum ut.</p>
+              
           </div>
         </div>
         <div class="about-block-object-bottom"></div>
@@ -173,29 +179,29 @@
       <div class="about-skills-container">
         <div class="about-skills-text">
           <h3>What I can</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae dolores asperiores modi, quo
-            praesentium similique a quam accusantium sunt non? Cumque, voluptas voluptate. Odio accusantium, beatae
-            placeat magnam modi voluptate.
-            Porro placeat illo nulla aut quod cum mollitia sapiente ipsum ut.</p>
+          <p>At TechGrounds I've learned the foundations of HTML, CSS, JavaScript and React. During these six months I coded day in day out, week after week. We were teached how to adequately problem solve and how to learn self-directed and with our peers. Aside from the languages I just stated, I also worked with tools as Redux, Firebase and Bootstrap. The exercises that I've made include an e-commerce project, an API based weather app, a JavaScript quiz and stopwatch, and multiple responsive website layouts.  <br><br>
+          When looking at my visual skills, I have been deeply formed through my education in cultural studies. A substantial amount of the course was dedicated to gaining more knowledge of the esthetics of the arts. Through the years I've also dabbled in some small Photoshop and Illustrator projects, causing me to also have a basic understanding of designer tools. </p>
         </div>
-        <div class='skills-flex-container'>
-          <div class='skills-column'>
-            <h4>HTML</h4>
-            <h4>CSS</h4>
-            <h4>JavaScript</h4>
-            <h4>React</h4>
-            <h4>Sass</h4>
+        <div class="skills-image-container">
+          <div class='skills-flex-container'>
+            <div class='skills-column'>
+              <h4>HTML</h4>
+              <h4>CSS</h4>
+              <h4>JavaScript</h4>
+              <h4>React</h4>
+              <h4>Sass</h4>
+            </div>
+            <div class="bars-column">
+              <div class="skills-bar html-bar"></div>
+              <div class="skills-bar css-bar"></div>
+              <div class="skills-bar js-bar"></div>
+              <div class="skills-bar react-bar"></div>
+              <div class="skills-bar sass-bar"></div>
+            </div>
           </div>
-          <div class="bars-column">
-            <div class="skills-bar html-bar"></div>
-            <div class="skills-bar css-bar"></div>
-            <div class="skills-bar js-bar"></div>
-            <div class="skills-bar react-bar"></div>
-            <div class="skills-bar sass-bar"></div>
-          </div>
+          <img class="profile-picture-desktop" src="/images/about/profilepicture-greyscale.jpg">
+          <img class="profile-picture-mobile" src="images/about/profilepicture-greyscale-landscape.jpg">
         </div>
-        <div class="about-image-and-skills"></div>
-        <img class="profile-picture" src="/images/about/profilepicture-greyscale.png">
       </div>
 
       </div>
@@ -204,21 +210,21 @@
     <section id="contact" class="contact-container">
       <h2>Contact </h2>
       <div class="contact-info">
-        <p>mail: manon.heijmans@gmail.com</p>
-        <p>Nijmegen</p>
+        <p><i class="far fa-paper-plane"></i> manon.heijmans@gmail.com</p>
+        <p><i class="fas fa-home"></i>Nijmegen</p>
       </div>
       <div class="contact-socials">
         <a href="https://github.com/manoninonam" target="_blank">
-          <p>Github: manoninonam</p>
+          <p><i class="fab fa-github"></i> manoninonam</p>
         </a>
         <a href="https://www.linkedin.com/in/manon-heijmans/" target="_blank">
-          <p>LinkedIn: manon-heijmans</p>
+          <p><i class="fab fa-linkedin"></i> manon-heijmans</p>
         </a>
       </div>
 
 
     </section>
-    
+
   </main>
 
 
@@ -226,7 +232,7 @@
 
 
 
- 
+
 
 </body>
 
