@@ -16,7 +16,7 @@
 
 .project-card {
     margin-bottom: 5vh;
-    border-left: solid 5px $primary-color;
+    // border-left: solid 5px $primary-color;
 
     position: relative;
     background-color: white;
@@ -102,8 +102,15 @@
 
 @media screen and (min-width: $lg-media) and (max-width: 1440px) {
   .project-card:hover .slider {
-    width: 70%;
+    width: 30vw;
 }
+
+  .slider-text {
+    padding: 0 30px;
+  }
+
+  .card2:hover .background-block:nth-child(2) {width: calc(30vw + 50px);}
+
 }
 
 // extra large screens 
@@ -112,6 +119,13 @@
   .project-card:hover .slider {
     width: 50%;
 }
+
+.card2:hover .background-block:nth-child(1) {
+  width: 130%;
+}
+
+.card2:hover .background-block:nth-child(2) {width: 60%;}
+
 }
 
 
@@ -225,11 +239,7 @@
   bottom: 0%;
 }
 
-.card2:hover .background-block:nth-child(1) {
-  width: 130%;
-}
 
-.card2:hover .background-block:nth-child(2) {width: 60%;}
 
 
 // card 3 background blocks
