@@ -524,7 +524,8 @@ h2 {
   padding-bottom: 0px;
 }
 
-.text1, .text3 {
+.text1,
+.text3 {
   border-left: 2px solid #0118bf;
 }
 
@@ -532,7 +533,8 @@ h2 {
   border-right: 2px solid #0118bf;
 }
 
-.text2, .about-skills-text {
+.text2,
+.about-skills-text {
   text-align: right;
 }
 
@@ -627,6 +629,18 @@ h2 {
   width: 42%;
 }
 
+@media screen and (min-width: 992px) and (max-width: 1920px) {
+  .about-text {
+    width: 50vw;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .about-text {
+    width: 35vw;
+  }
+}
+
 @media (min-width: 992px) {
   .about-text-container h2 {
     display: none;
@@ -650,7 +664,6 @@ h2 {
     padding-bottom: 20px;
   }
   .about-text {
-    width: 35vw;
     border: none;
     position: relative;
   }
@@ -711,7 +724,7 @@ h2 {
   .skills-flex-container {
     position: absolute;
     left: -150px;
-    bottom: 10%;
+    bottom: 100px;
     z-index: 1;
   }
 }
