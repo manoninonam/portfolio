@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        @keyframes animation{0% {background-color:#583d72;
+                border-top-right-radius: 0%;
+                border-bottom-right-radius: 0%;
+                border-bottom-left-radius: 0%;
+                border-top-left-radius: 0%; 
+                transform: rotate(0deg)}
+     
+
+
+            20%{background-color:#583d72;
+            border-top-right-radius: 0%;
+                border-bottom-right-radius: 0%;
+                border-bottom-left-radius: 0%;
+                border-top-left-radius: 0%; 
+                transform: rotate(0deg)}
+     
+            
+           40% {
+                background-color: #9f5f80;
+                border-top-right-radius: 50%;
+                border-bottom-right-radius: 0%;
+                border-bottom-left-radius: 0%;
+                border-top-left-radius: 0%; 
+                transform: rotate(45deg)
+            }
+
+            60%{
+                background-color: #ff8474;
+                border-top-right-radius: 50%;
+                border-bottom-right-radius: 50%;
+                border-bottom-left-radius: 0%;
+                border-top-left-radius: 0%;
+                transform: rotate(90deg)
+            }
+
+           80% {
+                background-color: #ffc996;
+                border-top-right-radius: 50%;
+                border-bottom-right-radius: 50%;
+                border-bottom-left-radius: 50%;
+                border-top-left-radius: 0%;
+                transform: rotate(135deg)
+            }
+
+            100%{
+                background-color: plum;
+                border-top-right-radius: 50%;
+                border-bottom-right-radius: 50%;
+                border-bottom-left-radius: 50%;
+                border-top-left-radius: 50%;
+                transform: rotate(180deg);
+               
+            }
+
+        }
+
+       
+        .background {
+            background-color: black;
+            height: 400px;
+            width: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+        }
+
+        .object {
+            background-color: #583d72;
+            width: 200px;
+            height: 200px;
+            margin: 30px;
+            animation-name: animation;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate; 
+        }
+
+    </style>
+
+</head>
+
+<body>
+   <h1>Opdracht 7</h1>
+    <div class="background">
+        <div class="object"></div>
+        
+    </div>
+    <br>
+    <a href="../../index.html">Terug</a>
+</body>
+
+</html>

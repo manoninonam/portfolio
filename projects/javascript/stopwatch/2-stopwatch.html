@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch</title>
+</head>
+
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+
+        <title>Stopwatch</title>
+    </head>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --bordercolor: #00B371;
+            --bordersecondcolor: #00E893;
+            --backgroundcolor: rgb(white);
+            --startcolor: rgb(218, 247, 166);
+            --pausecolor: rgb(255, 195, 0);
+            --resetcolor: rgb(255, 87, 51);
+        }
+
+
+        body {
+            background-color: var(--backgroundcolor);
+        }
+
+        h1 {
+            text-align: center;
+            font-family: 'Montserat', sans-serif;
+            font-weight: 300;
+            padding-top: 20px;
+        }
+
+
+
+
+        .stopwatch-display {
+            height: 400px;
+            width: 400px;
+            border-radius: 50%;
+            padding: 30px;
+            margin: 100px auto 0px auto;
+            background-color: black;
+            color: white;
+            font-size: 2rem;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            border: solid 10px rgb(26, 24, 24);
+        }
+
+
+
+        .stopwatch-display:before {
+            content: " ";
+            position: absolute;
+            z-index: -1;
+            border-radius: 50%;
+            top: -15px;
+            left: -15px;
+            right: -15px;
+            bottom: -15px;
+            border: 5px solid var(--bordersecondcolor);
+
+
+        }
+
+        .stopwatch-display:after {
+            content: " ";
+            position: absolute;
+            z-index: -2;
+            border-radius: 50%;
+            top: -35px;
+            left: -35px;
+            right: -35px;
+            bottom: -35px;
+            border: 20px solid var(--bordercolor);
+            filter: drop-shadow(0 0 10px black)
+        }
+
+        .timer {
+            font-size: 3.5rem;
+            font-family: 'PT Mono', monospace;
+        }
+
+
+        .stopwatch-controller {
+            display: flex;
+            color: black;
+        }
+
+
+
+        .button {
+            height: 60px;
+            width: 60px;
+            border-radius: 50%;
+            margin: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: white 2px solid;
+            font-size: 0.7rem;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .button:nth-child(1) {
+            background-color: var(--startcolor);
+        }
+
+        .button:nth-child(2) {
+            background-color: var(--pausecolor);
+        }
+
+        .button:nth-child(3) {
+            background-color: var(--resetcolor);
+        }
+    </style>
+
+    <body>
+        <h1>Stopwatch</h1>
+        <div class="stopwatch-display">
+            <p>SKMEI</p>
+            <div class="timer">
+                <p>00:00:00</p>
+            </div>
+            <div class="stopwatch-controller">
+                <div class="button start-button">
+                    <p>Start</p>
+                </div>
+                <div class="button pause-button">
+                    <p>Pause</p>
+                </div>
+                <div class="button reset-button">
+                    <p>Reset</p>
+                </div>
+            </div>
+        </div>
+
+        <script>
+
+            let startButton = document.querySelector('.start-button');
+            let pauseButton = document.querySelector('.pause-button');
+            let resetButton = document.querySelector('.reset-button');
+            let timer = document.querySelector('.timer')
+
+            let intervalId
+            let timeOut = false
+
+            let ms = 0
+            let sec = 0
+            let min = 0
+
+            //event listeners
+            startButton.addEventListener("click", startFunction)
+            pauseButton.addEventListener("click", pauseFunction)
+            resetButton.addEventListener("click", resetFunction)
+
+            //button functions 
+            function startFunction() {
+                if (timeOut == false) {
+                    timeElapsed();
+                }
+            }
+
+
+            function pauseFunction() {
+                clearInterval(intervalId);
+            }
+
+
+            function resetFunction() {
+                clearInterval(intervalId);
+
+                timer.innerHTML = "00:00:00";
+                timeOut = false;
+
+                ms = 0;
+                sec = 0;
+                min = 0;
+            }
+
+            //interval function
+            function timeElapsed() {
+                intervalId = setInterval(timerFunction, 10)
+            }
+
+            //timer 
+            function timerFunction() {
+                sec = parseInt(sec);
+                min = parseInt(min);
+                ms = parseInt(ms);
+
+                ms++
+
+                if (ms == 100) {
+                    sec++;
+                    ms = 0;
+                }
+
+                if (sec == 60) {
+                    min++;
+                    sec = 0;
+                }
+                if (ms < 10 || ms == 0) {
+                    ms = "0" + ms;
+                }
+                if (sec < 10 || sec == 0) {
+                    sec = "0" + sec;
+                }
+                if (min < 10 || min == 0) {
+                    min = "0" + min;
+                }
+
+                timer.innerHTML = min + ":" + sec + ":" + ms;
+
+                if ((min == 99) && (sec == 59) && (ms == 99)) {
+                    clearInterval(intervalId);
+                    timeOut = true;
+                }
+            }
+
+        </script>
+
+    </body>
+
+</html>

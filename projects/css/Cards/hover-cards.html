@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #E6E4D3;
+            height: 100vh;
+            margin: 0px;
+            display: grid;
+            place-items: center;
+            overflow: hidden;
+            font-family: arial;
+        }
+
+        img {
+            width: 250px;
+            height: 250px;
+
+            border-top-left-radius: 1rem;
+            border-top-right-radius: 1rem;
+        }
+
+        .cards {
+            display: flex;
+        }
+
+        .card {
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+            width: 250px;
+            border-radius: 1rem;
+            margin-left: -5rem;
+            box-shadow: 2px 2px 12px 2px;
+            transition: 0.2s
+        }
+
+
+        .card:not(:first-child) {
+            margin-left: -4rem
+        }
+
+        .card:hover {
+            transform: translateY(-1rem)
+        }
+
+        .card:hover~.card {
+            transform: translateX(4rem);
+            /* background-image: linear-gradient(120deg, #eaee44, #33d0ff); */
+        }
+
+        .imageContainer {
+            position: relative;
+        }
+
+        h2 {padding: 10px;}
+
+        p {
+           padding: 10px;
+        }
+
+        
+
+        button {
+            background-color: slategrey;
+            width: 100%;
+            height: 50px;
+            margin: 0px;
+            border: none;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 16px;
+            transition: 0.3s;
+            border-bottom-left-radius: 1rem;
+            border-bottom-right-radius: 1rem;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+   
+    <div class="cards">
+
+        <div class="card">
+                <img src="img/gif1.gif" alt="game1">
+            <h2>Yoshi's Island</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer at ipsum et dolor tempus accumsan.
+                Vivamus mauris eros, tincidunt vel congue ut, pulvinar a justo. </p>
+            <button>Play Super Mario</button>
+        </div>
+        <div class="card">
+            <img src="img/gif2.gif" alt="game2">
+            <h2>Super Mario 2</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer at ipsum et dolor tempus accumsan.
+                Vivamus mauris eros, tincidunt vel congue ut, pulvinar a justo. </p>
+            <button>Play Super Mario 2</button>
+        </div>
+        <div class="card">
+            <img src="img/gif3.gif" alt="game3">
+            <h2>Super Mario Odyssey</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer at ipsum et dolor tempus accumsan.
+                Vivamus mauris eros, tincidunt vel congue ut, pulvinar a justo. </p>
+            <button>Play Super Mario Odyssey</button>
+
+        </div>
+        <div class="card">
+            <img src="img/gif4.gif" alt="game4">
+            <h2>Luigi's Mansion</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer at ipsum et dolor tempus accumsan.
+                Vivamus mauris eros, tincidunt vel congue ut, pulvinar a justo. </p>
+            <button>Play Luigi's Mansion</button>
+        </div>
+    </div>
+ 
+</body>
+
+</html>

@@ -81,6 +81,16 @@ h2 {
     padding-bottom: 1rem;
 }
 
+.more-projects-link a {
+    font-size: 1.5rem;
+    text-decoration: none;
+
+  }
+
+  .more-projects-link a:hover { 
+    color: $secondary-color;
+  }
+
 .about-container p {
     padding-bottom: 2rem;
 }

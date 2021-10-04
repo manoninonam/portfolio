@@ -97,8 +97,8 @@ h6 {
   font-family: "TTRoundsNeue-Regular", Arial, sans-serif;
 }
 
-h1 {
-  font-size: 3.5rem;
+.banner-text-container h1 {
+  font-size: 3rem;
 }
 
 h2 {
@@ -127,8 +127,21 @@ h2 {
   padding-bottom: 1rem;
 }
 
+.more-projects-link a {
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.more-projects-link a:hover {
+  color: #0118bf;
+}
+
 .about-container p {
   padding-bottom: 2rem;
+}
+
+.contact-container h2 {
+  padding-bottom: 1rem;
 }
 
 @media (min-width: 1440px) {
@@ -138,8 +151,8 @@ h2 {
 }
 
 @media (min-width: 992px) {
-  h3 {
-    font-size: 5rem;
+  h1 {
+    font-size: 3.5rem;
   }
 }
 
@@ -148,16 +161,15 @@ h2 {
 }
 
 .banner-grid-container {
-  top: -75px;
   position: relative;
-  min-height: 100vh;
+  height: 100vh;
   width: 90%;
-  margin: 0 auto 0 auto;
+  margin: 0 auto;
 }
 
 .banner-text-container {
   position: absolute;
-  top: 20%;
+  top: 30%;
 }
 
 .banner-carousel-container {
@@ -175,13 +187,22 @@ h2 {
   position: absolute;
   width: 100%;
   min-height: 20vh;
-  bottom: 0;
+  bottom: 5vw;
   background-color: #ebbd21;
+}
+
+@media (min-width: 992px) and (orientation: portrait) {
+  .carousel {
+    position: relative;
+    right: 20%;
+    width: 70vw;
+  }
 }
 
 @media (min-width: 992px) {
   .banner-grid-container {
     width: 80%;
+    top: -75px;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 30% 70%;
@@ -231,8 +252,7 @@ h2 {
 }
 
 .project-card {
-  margin-bottom: 5vh;
-  border-left: solid 5px #ebbd21;
+  margin-bottom: 20px;
   position: relative;
   background-color: white;
 }
@@ -292,15 +312,37 @@ h2 {
   padding: 1rem;
 }
 
+.more-projects-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 20px;
+}
+
 @media screen and (min-width: 992px) and (max-width: 1440px) {
   .project-card:hover .slider {
-    width: 70%;
+    width: 30vw;
+  }
+  .slider-text {
+    padding: 0 30px;
+  }
+  .card2:hover .background-block:nth-child(2) {
+    width: calc(30vw + 50px);
   }
 }
 
 @media screen and (min-width: 1440px) {
   .project-card:hover .slider {
     width: 50%;
+  }
+  .card2:hover .background-block:nth-child(1) {
+    width: 130%;
+  }
+  .card2:hover .background-block:nth-child(2) {
+    width: 60%;
   }
 }
 
@@ -320,7 +362,6 @@ h2 {
             flex-direction: column;
     gap: 5rem;
     margin: 0 auto 0 auto;
-    padding-bottom: 100px;
   }
   .project-card {
     position: relative;
@@ -393,12 +434,6 @@ h2 {
     right: 100%;
     bottom: 0%;
   }
-  .card2:hover .background-block:nth-child(1) {
-    width: 130%;
-  }
-  .card2:hover .background-block:nth-child(2) {
-    width: 60%;
-  }
   .card3 .background-block {
     height: 5%;
     bottom: 100%;
@@ -460,6 +495,12 @@ h2 {
   }
   .card1:hover .slider-accent {
     height: 20%;
+  }
+  .more-projects-link {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    margin-right: 10vw;
   }
 }
 
@@ -691,6 +732,10 @@ h2 {
   margin-bottom: 1.2rem;
 }
 
+.contact-container i {
+  padding-right: 5px;
+}
+
 @media (max-width: 768px) {
   nav .navbar-main-links {
     display: none;
@@ -826,6 +871,85 @@ h2 {
     font-size: 40px;
     top: 15px;
     right: 35px;
+  }
+}
+
+.projects-page {
+  position: relative;
+  height: 100vh;
+}
+
+.projects-page-title h1 {
+  padding-top: 100px;
+  text-align: center;
+}
+
+.projects-page-title p {
+  text-align: center;
+  padding: 0 30px;
+}
+
+.projects-page-flex-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding-bottom: 10px;
+}
+
+.projects-page-sub-container {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 200px;
+}
+
+.projects-page-sub-container a {
+  font-family: "TTRoundsNeue-Thin", Arial, sans-serif;
+  font-size: 1.2rem;
+  padding: 10px;
+}
+
+.projects-page-sub-container a:hover {
+  color: #0118bf;
+}
+
+.projects-page-block {
+  position: absolute;
+  z-index: -1;
+}
+
+.projects-page-block1 {
+  width: 20px;
+  height: 60vh;
+  background-color: #ebbd21;
+  left: 0px;
+  top: 0px;
+}
+
+.projects-page-block3 {
+  width: 20px;
+  height: 60vh;
+  background-color: #0118bf;
+  right: 0px;
+  bottom: 0px;
+}
+
+@media (max-width: 480px) {
+  .projects-page h1 {
+    font-size: 2.5rem;
+  }
+  .projects-page h2 {
+    font-size: 2rem;
   }
 }
 /*# sourceMappingURL=main.css.map */

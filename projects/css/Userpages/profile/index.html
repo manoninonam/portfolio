@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="https://cdn.lineicons.com/2.0/LineIcons.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;700&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <nav class="side-nav">
+        <h2>Menu</h2>
+        <hr>
+        <ul>
+            <li><a href="#"><i class="lni lni-blackboard"></i>Dashboard</a></li>
+            <li><a href="./index.html" class="active"><i class="lni lni-user"></i>User profile</a></li>
+            <li><a href="../members/index.html"><i class="lni lni-users"></i>Members</a></li>
+            <li><a href="#"><i class="lni lni-briefcase"></i>Assignments</a></li>
+            <li><a href="#"><i class="lni lni-notepad"></i>Blogs</a></li>
+        </ul>
+    </nav>
+
+    <nav class="top-nav">
+        <a href="javascript:void(0);" onclick="myFunction()">
+            <i class="lni lni-menu"></i></a>
+        <ul id="dropdown-menu">
+            <li><a href="#"><i class="lni lni-blackboard"></i>Dashboard</a></li>
+            <li><a href=".index.html" class="active"><i class="lni lni-user"></i>User profile</a></li>
+            <li><a href="../members/index.html"><i class="lni lni-users"></i>Members</a></li>
+            <li><a href="#"><i class="lni lni-briefcase"></i>Assignments</a></li>
+            <li><a href="#"><i class="lni lni-notepad"></i>Blogs</a></li>
+        </ul>
+    </nav>
+
+
+
+    <main>
+        <section class="profile" id="profile">
+            <img src="../img/headerprofile v3.png">
+            <h1>John Doe</h1>
+            <p class="user">@JohnDoe</p>
+            <p class=profile-quote>"Being open minded on other solutions gains better results than using the first
+                encountered solution"</p>
+            <hr>
+            <div class="like-buttons">
+                <p><i class="lni lni-thumbs-up"></i>1000</p>
+                <p><i class="lni lni-heart"></i>9999</p>
+                <p><i class="lni lni-thumbs-down"></i>0</p>
+            </div>
+            <img src="../img/softskills v2.png">
+        </section>
+
+        <section class="personal-info">
+
+            <div class="personal-information">
+                <h2>Personal information</h2>
+                <div class="personalia">
+
+
+                    <p>Name: John</p>
+                    <p>Surname: Doe</p>
+                    <p>Age: 40</p>
+                    <p>Sex: M</p>
+                    <p>Date of Birth: 01-01-1980</p>
+                    <p>Adress: Osdorpplein 16</p>
+                    <p>Postal code: 1234AB </p>
+                    <p>City: Amsterdam</p>
+                    <p>Country: NL</p>
+                    <p>Profession: Full stack developer</p>
+                    <p>Hobby: Table Tennis</p>
+                </div>
+            </div>
+
+            <div class="languages">
+                <h2>Languages</h2>
+                <table>
+                    <tr>
+                        <td>HTML</td>
+                        <td><i class="lni lni-star-filled"></i><i class="lni lni-star-filled"></i><i
+                                class="lni lni-star-filled"></i><i class="lni lni-star-filled"></i><i
+                                class="lni lni-star-filled"></i></td>
+                    </tr>
+                    <tr>
+                        <td>CSS</td>
+                        <td><i class="lni lni-star-filled"></i><i class="lni lni-star-filled"></i><i
+                                class="lni lni-star-filled"></i><i class="lni lni-star-filled"></i><i
+                                class="lni lni-star"></i></td>
+                    </tr>
+                    <tr>
+                        <td>JavaScript</td>
+                        <td><i class="lni lni-star-filled"></i><i class="lni lni-star-filled"></i><i
+                                class="lni lni-star-filled"></i><i class="lni lni-star-filled"></i><i
+                                class="lni lni-star-filled"></i></td>
+                    </tr>
+                    <tr>
+                        <td>Java</td>
+                        <td><i class="lni lni-star-filled"></i><i class="lni lni-star-filled"></i><i
+                                class="lni lni-star-filled"></i><i class="lni lni-star-filled"></i><i
+                                class="lni lni-star-filled"></i></td>
+                    </tr>
+                    <tr>
+                        <td>Kotlin</td>
+                        <td></i><i class="lni lni-star-filled"></i><i class="lni lni-star-filled"></i><i
+                                class="lni lni-star-filled"></i><i class="lni lni-star-filled"></i><i
+                                class="lni lni-star"></i>
+                    </tr>
+                    <tr>
+                        <td>Groovy</td>
+                        <td><i class="lni lni-star-filled"></i><i class="lni lni-star-filled"></i><i
+                                class="lni lni-star-filled"></i><i class="lni lni-star"></i><i class="lni lni-star"></i>
+                        </td>
+                    </tr>
+                </table>
+                <div class="frameworks-and-tools">
+                    <h2>Frameworks & Tools</h2>
+                    <img src="../img/wordcloud.png">
+                </div>
+        </section>
+    </main>
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("dropdown-menu");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+    </script>
+</body>
+
+</html>

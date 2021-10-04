@@ -1,0 +1,158 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+
+ 
+ 
+  h1,
+  h2,
+  p,
+  button,
+  a {
+    font-family: "Indie Flower", cursive;
+  }
+
+ .page-title {
+   text-align: center;
+ }
+
+ .quiz {
+   height: 100vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+ }
+
+  .main-container {
+    width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+  }
+
+  .start-restart-button {
+    display: block;
+    height: 40px;
+    margin: 5px;
+    padding: 0 5px;
+    text-decoration: none;
+    border: none;
+    background-color: rgb(60, 175, 184);
+  }
+
+  .quiz-container {
+    width: 400px;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(21, 129, 115);
+    filter: drop-shadow(0 0 0.2rem grey);
+  }
+
+  .quiz-title {
+    padding: 20px 0px;
+  }
+
+  .quiz-progress {
+    padding: 5px 0px;
+  }
+
+  .question {
+    width: 375px;
+    height: 100px;
+    margin-bottom: 12px;
+    background-color: white;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .answer-container {
+    position: relative;
+    width: 375px;
+    margin-top: -12px;
+    display: flex;
+    align-items: center;
+  }
+
+  .answer-nmbr-odd {
+    width: 75px;
+    height: 75px;
+    position: relative;
+    left: -12px;
+    z-index: 1;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 12px solid rgb(21, 129, 115);
+  }
+
+  .answer {
+    background-color: white;
+    height: 50px;
+    width: 375px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+  }
+
+  .answer-odd {
+    padding-left: 75px;
+  }
+
+  .answer-nmbr-even {
+    width: 75px;
+    height: 75px;
+    position: relative;
+    left: 312px;
+    z-index: 1;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 12px solid rgb(21, 129, 115);
+  }
+
+  .answer-even {
+    padding-right: 75px;
+    justify-content: flex-end;
+  }
+
+  .progress-button-container {
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    padding-top: 6px;
+  }
+
+  .progress-button {
+    display: block;
+    height: 40px;
+    margin: 5px;
+    padding: 0 5px;
+    text-decoration: none;
+    border: none;
+    background-color: rgb(60, 175, 184);
+  }
+
+  .progress-button:hover {
+    background-color: rgb(118, 211, 218);
+  }
+
+  .green {
+    background-color: green;
+  }
+
+  .red {
+    background-color: red;
+  }

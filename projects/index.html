@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+    crossorigin="anonymous"></script>
+  <script type="text/javascript" src="../js/scripts.js" defer></script>
+  <script src="https://kit.fontawesome.com/3ef49ce8f5.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="../scss/main.css" />
+  <title>Portfolio</title>
+</head>
+
+<body>
+  <div class="projects-page">
+  <header class="header-container">
+    <nav class="nav-container">
+      <div class="navbar-own-logo">
+        <a href="../index.html"><img src="/images/navbar/MH.png" alt="logo"></a>
+      </div>
+      <ul class="navbar-main-links">
+        <li><a href="../index.html#projects">Projects</a></li>
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+      <ul class="navbar-icon-links">
+        <li><a href="https://github.com/manoninonam" target="_blank"><i class="fab fa-github"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/manon-heijmans/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </li>
+        <li class="navbar-hamburger-icon"><span style="font-size:30px;cursor:pointer" onclick="openNav()"><i
+              class="bi bi-list"></i></span> </li>
+      </ul>
+      <div id="myNav" class="nav-overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+          <a href="../index.html#projects" onclick="closeNav()">Projects</a>
+          <a href="../index.html#about" onclick="closeNav()">About</a>
+          <a href="../index.html#contact" onclick="closeNav()">Contact</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+ 
+    <div class="projects-page-title">
+      <h1>Live Projects</h1>
+      <p>A selection of assignments made during my time at TechGrounds</p>
+    </div>
+
+    <div class="projects-page-flex-container">
+      <div class="CSS3-container projects-page-sub-container">
+        <h2>CSS3</h2>      
+        <a href="../projects/css/De Chefkok/index.html">De Chefkok</a>
+        <a href="../projects/css/Bootstrap/bootstrap.html">Bootstrap</a>  
+        <a href="../projects/css/Space/index.html">Amazing Space</a>
+        <a href="../projects/css/Userpages/profile/index.html">Profile</a>
+        <a href="../projects/css/Userpages/members/index.html">Members</a>
+        <a href="../projects/css/animation.html">Animation exercise</a>
+        <a href="../projects/css/Cards/hover-cards.html">Cards deck</a>
+      </div>
+      <div class="JS-container projects-page-sub-container">
+        <h2>JavaScript</h2>
+        <a href="../projects/javascript/quiz/index.html">Quiz</a>
+        <a href="../projects/javascript/stopwatch/2-stopwatch.html">Stopwatch</a>
+        <a href="../projects/carousel/javascript/1-carousel-v1.html">Carousel</a>
+      </div>
+      <div class="react-container projects-page-sub-container">
+        <h2>React</h2>
+        <a href="https://manoninonam.github.io/live-preview-react-weather-app/">Weather App</a>
+        <a href="https://manoninonam.github.io/live-preview-react-e-commerce-app/">E-commerce App</a>
+      </div>
+    </div>
+    <div class="projects-page-block projects-page-block1"></div>
+
+  <div class="projects-page-block projects-page-block3"></div>
+
+  </div>
+ 
+</body>
+
+</html>

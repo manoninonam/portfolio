@@ -3,9 +3,8 @@
 }
 
 .banner-grid-container {
-  top: -75px;
   position: relative;
-  min-height: 100vh;
+  height: 100vh;
   width: 90%;
   margin: 0 auto;
 }
@@ -19,7 +18,7 @@
 
 .banner-carousel-container {
   position: absolute;
-  bottom: 5%;
+  bottom: 15%;
   z-index: 1;
 }
 
@@ -32,7 +31,7 @@
   position: absolute;
   width: 100%;
   min-height: 20vh;
-  bottom: -5vh;
+  bottom: 5vw;
   background-color: $primary-color;
   
 }
@@ -50,6 +49,7 @@
 @media (min-width: $lg-media) {
   .banner-grid-container {
     width: 80%;
+    top: -75px;
     display: grid;
     grid-template-columns: 30% 70%;
   }

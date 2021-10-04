@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/3ef49ce8f5.js" crossorigin="anonymous"></script>
+
+    <title>DIY Carousel - 1</title>
+    <style>
+
+        h1 {text-align: center;
+        }
+
+        .carousel-container {
+            width: 60vw;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            border-radius: 25px;
+        }
+
+        .carousel-slide-container {
+            width: 60vw;
+            transform-style: preserve-3d;
+           
+        }
+
+        .slide {
+            width: 60vw;
+            position: absolute;
+            display: block;
+            top: 0;
+            z-index: -1;
+            transition: transform .5s, z-index .5s;
+        }
+
+        .slide.active {
+            position: relative;
+            z-index: 1
+        }
+
+
+        .slide.transition {
+            transition: 0.5s ease transform;
+        }
+
+        .carousel-controls {
+            position: absolute;
+            background-color: rgb(85, 85, 85);
+            opacity: 0.5;
+            height: 100%;
+            width: 5%;
+            transition-duration: 0.2s;
+            transition-timing-function: ease-in;
+
+        }
+
+        .carousel-controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 2;
+        }
+
+        .carousel-controls:hover {
+            opacity: 0.7;
+        }
+
+        .prev {
+            top: 0;
+            left: 0;
+            border-radius: 25px 0px 0px 25px;
+        }
+
+        .next {
+            top: 0;
+            right: 0;
+            border-radius: 0px 25px 25px 0px;
+        }
+    </style>
+</head>
+
+
+<body>
+    <h1>DIY Carousel </h1>
+    <div class="carousel-container">
+        <div class="carousel-slide-container">
+
+            <img class="slide active" src="img/carousel1.jpg">
+            <img class="slide" src="img/carousel2.jpg">
+            <img class="slide" src="img/carousel3.jpg">
+            <!-- <img class="slide" src="../img/carousel1.jpg">            
+            <img class="slide" src="../img/carousel1.jpg"> -->
+        </div>
+
+        <div class="carousel-controls prev">
+            <p><i class="fas fa-chevron-left fa-2x"></i></p>
+        </div>
+        <div class="carousel-controls next">
+            <p><i class="fas fa-chevron-right fa-2x"></i></p>
+        </div>
+    </div>
+
+
+
+    <script>
+
+        const slides = Array.from(document.querySelectorAll(".slide")); 
+        const slider = document.querySelector(".carousel-slide-container");
+  
+       
+        const buttons = document.querySelectorAll(".carousel-controls");
+
+        
+
+
+        buttons.forEach((button) => {
+            button.addEventListener("click", () => {
+                if (button.classList.contains("next")) getNextSlide();
+                else if (button.classList.contains("prev")) getPrevSlide();
+            });
+        });
+
+
+        function getNextPrev() {  
+            const activeSlide = document.querySelector(".slide.active"); //actieve slide 
+            const activeIndex = slides.indexOf(activeSlide); // index van de actieve slide
+            let next;
+            let prev;
+            // als de index van de actieve slide overeenkomt met de laatste slide, dan wordt next slides[0]
+            if (activeIndex === slides.length - 1) {
+                next = slides[0];
+            // anders wordt next de eerstvolgende slide qua index
+            } else {
+                next = slides[activeIndex + 1];
+            }
+
+            //als de index van de actieve slide gelijk staat aan 0, dan wordt prev de laatste slide in de array.
+            if (activeIndex === 0) {
+                prev = slides[slides.length - 1];
+            //anders wordt prev de vorige slide qua index.
+            } else {
+                prev = slides[activeIndex - 1];
+            }
+            //geef de nieuwe waarden voor prev en next terug 
+            return [next, prev];
+        }
+
+
+        function getPosition() {
+            const activeSlide = document.querySelector(".slide.active");
+            const activeIndex = slides.indexOf(activeSlide);
+            const [next, prev] = getNextPrev();
+            slides.forEach((slide, index) => {
+                if (index === activeIndex) {
+                    slide.style.transform = "translateX(0)";
+                } else if (slide === prev) {
+                    slide.style.transform = "translateX(-100%)";
+                } else if (slide === next) {
+                    slide.style.transform = "translateX(100%)";
+                } else {
+                    slide.style.transform = "translateX(100%)";
+                }
+            });
+        }
+
+
+        function getNextSlide() {
+            const current = document.querySelector(".slide.active");
+            const [next, prev] = getNextPrev();
+        
+            current.style.transform = "translate(-100%)";
+            current.classList.remove("active");
+            next.style.transform = "translateX(0)";
+            next.classList.add("active");
+
+            getPosition();
+        }
+
+
+        function getPrevSlide() {
+            const current = document.querySelector(".active");
+            const [next, prev] = getNextPrev();
+
+            current.style.transform = "translate(100%)";
+            current.classList.remove("active");
+            prev.style.transform = "translateX(0)";
+            prev.classList.add("active");
+            getPosition();
+        }
+
+        getPosition();
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
