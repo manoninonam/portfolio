@@ -1,4 +1,4 @@
 # PORTFOLIO
-Old portfolio made during my web development course at Techgrounds. Basic HTML page with vanilla JS. Since this was made more than 2 years ago, the info on my skills and experience are really outdated.
+Old portfolio made during my web development course at Techgrounds. Basic HTML page with vanilla JS. Still up in the air to showcase some projects, but is otherwise under construction.
 
 link to the project: [portfolio](https://portfolio-manon-heijmans.netlify.app)
